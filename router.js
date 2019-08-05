@@ -23,4 +23,7 @@ router.get('/admin', pagesController.getAdminIndexPage)
     .get('/index', pagesController.getIndexPage)
     .get('/detail', pagesController.getDetailPage)
     .get('/list', pagesController.getListPage)
+
+    //业务处理路由
+    .get('/login', pagesController.getLoginPage)
 module.exports = router 
