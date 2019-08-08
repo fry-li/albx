@@ -3,6 +3,7 @@ const express = require('express');
 //引入页面返回控制器
 const pagesController = require('./controllers/pagesController.js')
 const userController = require('./controllers/userController.js')
+const postController = require('./controllers/postController')
 let router = express.Router();
 
 //配置路由
@@ -20,10 +21,11 @@ router.get('/admin', pagesController.getAdminIndexPage)
     .get('/admin/sildes', pagesController.getAdminSlidesPage)
     .get('/admin/users', pagesController.getAdminUsersPage)
     //前台页面
-    .get('/index', pagesController.getIndexPage)
+    .get('/', pagesController.getIndexPage)
     .get('/detail', pagesController.getDetailPage)
     .get('/list', pagesController.getListPage)
 
     //业务处理路由
-    .get('/login', pagesController.getLoginPage)
+    .post('/login', userController.login)
+    .get('/getAllPost',postController.getAllPost)
 module.exports = router 

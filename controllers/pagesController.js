@@ -20,7 +20,7 @@ exports.getAdminCommentsPage = (req, res) => {
 }
 exports.getAdminLoginPage = (req, res) => {
     res.render('admin/login.ejs');
-}
+} 
 exports.getAdminNavMenusPage = (req, res) => {
     res.render('admin/nav-menusPage.ejs');
 }
