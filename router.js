@@ -5,6 +5,7 @@ const pagesController = require('./controllers/pagesController.js')
 const userController = require('./controllers/userController.js')
 const postController = require('./controllers/postController')
 const cateController = require('./controllers/cateController.js')
+const uploadController = require('./controllers/uploadController.js')
 let router = express.Router();
 
 //配置路由
@@ -30,4 +31,5 @@ router.get('/admin', pagesController.getAdminIndexPage)
     .post('/login', userController.login)
     .get('/getAllPost', postController.getAllPost)
     .get('/getAllCate', cateController.getAllCate)
+    .post('/uploadFile',uploadController.uploadFile)
 module.exports = router 
